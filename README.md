@@ -11,13 +11,12 @@
 **Step for running downloaded project**:
 *With Docker*:
   1. Set custom settings in .env.dev
-  2. sudo docker-compose build
-  3. sudo docker-compose up -d
-  4. sudo docker-compose exec web python manage.py migrate --noinput
-  5. sudo docker-compose exec web python manage.py createsuperuser
-  6. sudo docker-compose logs -f
-  7. start redis server
-  8. celery -A HackerNews worker -B -l INFO    (for daily task)
+  2. docker-compose up -d --build
+  3. sudo docker-compose exec web python manage.py migrate --noinput
+  4. sudo docker-compose exec web python manage.py createsuperuser
+  5. sudo docker-compose logs -f
+  6. start redis server
+  7. celery -A HackerNews worker -B -l INFO    (for daily task)
 
 **Steps for local testing**:
 *all data for POST requests is in API documentaion*
