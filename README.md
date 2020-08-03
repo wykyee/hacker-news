@@ -4,10 +4,16 @@
 
 ``https://documenter.getpostman.com/view/11856566/T1DwatP3?version=latest#733e5894-74d7-5583-4e8c-a7d31188638a``
 
-**Step for running project**:
-1. pyhton3 manage.py migrate
-2. pyhton3 manage.py createsuperuser
-3. pyhton3 manage.py runserver
+**Step for running downloaded project**:
+*With Docker*:
+  1. Set custom settings in .env.dev
+  2. sudo docker-compose build
+  3. sudo docker-compose up -d
+  4. sudo docker-compose exec web python manage.py migrate --noinput
+  5. sudo docker-compose exec web python manage.py createsuperuser
+  6. sudo docker-compose logs -f
+  7. start redis server
+  8. celery -A HackerNews worker -B -l INFO
 
 **Steps for local testing**:
 *all data for POST requests is in API documentaion*
