@@ -3,9 +3,9 @@ import os
 from celery import Celery
 from celery.schedules import crontab
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "HackerNews.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hackernews.settings")
 
-app = Celery("HackerNews")
+app = Celery("hackernews")
 app.config_from_object("django.conf:settings", namespace="CELERY")
 app.autodiscover_tasks()
 
@@ -16,4 +16,3 @@ app.conf.beat_schedule = {
         "schedule": crontab(minute=0, hour=0),
     },
 }
-# celery -A HackerNews worker -B -l INFO
