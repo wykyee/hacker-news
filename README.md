@@ -4,6 +4,10 @@
 
 ``https://documenter.getpostman.com/view/11856566/T1DwatP3?version=latest#733e5894-74d7-5583-4e8c-a7d31188638a``
 
+**Link for deployed version**:
+
+``https://murmuring-peak-84585.herokuapp.com/api/``
+
 **Step for running downloaded project**:
 *With Docker*:
   1. Set custom settings in .env.dev
