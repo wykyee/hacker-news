@@ -1,4 +1,4 @@
-django==3.0.8
+django==3.0.12
 celery==4.4.7
 redis==3.5.3
 flake8==3.8.3
